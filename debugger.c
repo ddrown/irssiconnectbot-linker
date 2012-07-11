@@ -88,7 +88,6 @@ static int socket_abstract_client(const char *name, int type)
 }
 
 #include "linker_format.h"
-#include <../libc/private/logd.h>
 
 /*
  * Writes a summary of the signal to the log file.
@@ -117,7 +116,7 @@ static void logSignalSummary(int signum, const siginfo_t* info)
         "Fatal signal %d (%s) at 0x%08x (code=%d)",
         signum, signame, info->si_addr, info->si_code);
 
-    __libc_android_log_write(ANDROID_LOG_FATAL, "libc", buffer);
+    /* __libc_android_log_write(ANDROID_LOG_FATAL, "libc", buffer); */
 }
 
 /*
