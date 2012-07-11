@@ -1,0 +1,10 @@
+Source: linker
+Section: base
+Priority: optional
+Maintainer: Dan Drown <dan-android@drown.org>
+Package: linker
+Version: 2.3.4_r1
+Architecture: arm
+Depends: 
+Description: the system dynamic linker, built to include /data/local/lib in the
+ search path
