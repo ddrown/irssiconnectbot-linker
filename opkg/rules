@@ -5,7 +5,7 @@ PACKAGE=linker
 
 case "$1" in
   build)
-    make
+    env GOOGLE_PLATFORM=14 make
     ;;
 
   install)

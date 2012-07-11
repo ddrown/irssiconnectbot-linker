@@ -27,13 +27,13 @@ endif
 # LINKER_TEXT_BASE rounded down to a megabyte.
 LINKER_AREA_SIZE := 0x01000000
 
-PLATFORM_LIB_DIR := $(HOME)/droid/android-ndk-r5b/platforms/android-8/arch-arm/usr/lib/
+PLATFORM_LIB_DIR := $(HOME)/droid/android-ndk/platforms/android-$(GOOGLE_PLATFORM)/arch-arm/usr/lib/
 
 LOCAL_LDFLAGS := -Wl,-Ttext,$(LINKER_TEXT_BASE)
 LOCAL_LDFLAGS += -nostdlib $(PLATFORM_LIB_DIR)/crtend_android.o
 LOCAL_LDFLAGS += -L$(PLATFORM_LIB_DIR) -Wl,-rpath-link=$(PLATFORM_LIB_DIR)
 
-TOOLCHAIN=$(HOME)/droid/android-ndk-r5b/toolchains/arm-linux-androideabi-4.4.3
+TOOLCHAIN=$(HOME)/droid/android-ndk/toolchains/arm-linux-androideabi-4.4.3
 LIBGCC=$(TOOLCHAIN)/prebuilt/linux-x86/lib/gcc/arm-linux-androideabi/4.4.3/libgcc.a
 
 LOCAL_CFLAGS += -DPRELINK
