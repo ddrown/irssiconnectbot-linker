@@ -5,14 +5,14 @@ PACKAGE=linker
 
 case "$1" in
   build)
-    env GOOGLE_PLATFORM=14 make
+    env GOOGLE_PLATFORM=8 make
     ;;
 
   install)
     DESTDIR=~/tmp/$PACKAGE
     rm -rf $DESTDIR
-    mkdir -p $DESTDIR/data/local/bin
-    install -m755 linker $DESTDIR/data/local/bin
+    mkdir -p $DESTDIR/data/data/org.woltage.irssiconnectbot/bin
+    install -m755 linker $DESTDIR/data/data/org.woltage.irssiconnectbot/bin
     ;;
 
   clean)
