@@ -11,8 +11,8 @@ case "$1" in
   install)
     DESTDIR=~/tmp/$PACKAGE
     rm -rf $DESTDIR
-    mkdir -p $DESTDIR/data/data/org.woltage.irssiconnectbot/bin
-    install -m755 linker $DESTDIR/data/data/org.woltage.irssiconnectbot/bin
+    mkdir -p $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin
+    install -m755 linker $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin
     ;;
 
   clean)

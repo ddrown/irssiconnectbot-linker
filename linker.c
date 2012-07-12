@@ -597,7 +597,7 @@ static void dump(soinfo *si)
 
 static const char *sopaths[] = {
     "/system/lib",
-    "/data/data/org.woltage.irssiconnectbot/lib",
+    "/data/data/org.woltage.irssiconnectbot/files/lib",
     0
 };
 
