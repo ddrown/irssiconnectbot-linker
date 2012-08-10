@@ -11,8 +11,12 @@ case "$1" in
   install)
     DESTDIR=~/tmp/$PACKAGE
     rm -rf $DESTDIR
+    mkdir -p $DESTDIR/data/local/bin
     mkdir -p $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin
-    install -m755 linker $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin
+    install -m755 linker $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin/linker-ics
+    # this binary comes from https://github.com/CyanogenMod/android_bionic/tree/jellybean/linker
+    # with the use-data-local-lib patch applied
+    install -m755 linker-jb $DESTDIR/data/data/org.woltage.irssiconnectbot/files/bin/linker-jb
     ;;
 
   clean)
